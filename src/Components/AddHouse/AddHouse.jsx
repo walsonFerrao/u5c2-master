@@ -4,33 +4,7 @@ import axios from 'axios'
 
 
 
-export const AddHouse = () => {
- 
-  const [formdata,setformdata]=useState({
-     
-    "name":"",
-    "ownerName":"",
-    "address":"",
-    "areaCode":"",
-    "rent":"",
-
-  })
-
- const handleChange=(e)=>{
-
-    setformdata({...formdata,[e.target.className]:e.target.value})
- 
- }
- 
- 
- const tenant=(e)=>{
-
-const valu=e.target.checked;
-
-setformdata({...formdata,[e.target.className]:valu})
-
-
- }
+export const AddHouse = ({handleChange,senditoheaven,tenant}) => {
  
   return (
 
@@ -67,19 +41,7 @@ setformdata({...formdata,[e.target.className]:valu})
         <label>image</label>
         <input  type="text" className="image" required />
         <br />
-        <input className="submitBtn" type="submit"  onClick={()=>{
-
-
-axios.post('http://localhost:8080/houses', formdata)
-.then(function (response) {
-  console.log(response);
-})
-.catch(function (error) {
-  console.log(error);
-});
-
-
-        }} />
+        <input className="submitBtn" type="submit"  onClick={senditoheaven} />
       </form>
     </div>
   );

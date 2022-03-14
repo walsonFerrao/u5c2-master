@@ -4,7 +4,6 @@ import axios from "axios";
 export const Rentals = (props) => {
 
   const [aaa,setaa]=useState([])
-const [data,setdata]=useState(aaa)
 
 
   useEffect(()=>{
@@ -15,7 +14,7 @@ const [data,setdata]=useState(aaa)
       
       console.log(response.data);
       setaa(response.data)
-    setdata(aaa)
+   
     })
     .catch(function (error) {
       // handle error
@@ -28,8 +27,8 @@ const [data,setdata]=useState(aaa)
   
   const sortbyid=()=>{
   
-  const newarr=data.sort((a,b)=> b.id-a.id)
-  data(newarr)
+  const newarr=aaa.sort((a,b)=> b.id-a.id)
+  setaa(newarr)
   console.log(newarr)
   }
 
@@ -64,7 +63,7 @@ const [data,setdata]=useState(aaa)
           </tr>
         </thead>
         <tbody>
-          {data.map((house, index) => {
+          {aaa.map((house, index) => {
             return (
               <tr key={house.id} className="houseDetails">
                 <td className="houseId">{house.id}</td>
