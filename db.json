@@ -1,0 +1,40 @@
+{
+  "houses": [
+    {
+      "name": "aa",
+      "ownerName": "aa",
+      "address": "aaaaa",
+      "areaCode": "aa",
+      "rent": "aa",
+      "bachelor": true,
+      "id": 1
+    },
+    {
+      "name": "wlson",
+      "ownerName": "ferrao",
+      "address": "marakaada",
+      "areaCode": "575015",
+      "rent": "5000",
+      "bachelor": true,
+      "id": 2
+    },
+    {
+      "name": "wlson",
+      "ownerName": "ferrao",
+      "address": "marakaada",
+      "areaCode": "575015",
+      "rent": "5000",
+      "bachelor": true,
+      "id": 3
+    },
+    {
+      "name": "hehe",
+      "ownerName": "aaa",
+      "address": "kavoor",
+      "areaCode": "123",
+      "rent": "23444",
+      "married": true,
+      "id": 4
+    }
+  ]
+}
